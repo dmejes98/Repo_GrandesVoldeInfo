@@ -6,6 +6,12 @@ __pycache__/
 # C extensions
 *.so
 
+# Files and Folders
+
+SEN/
+SEN.parquet.gzip
+SEN.csv
+
 # Distribution / packaging
 .Python
 build/
