@@ -11,6 +11,7 @@ __pycache__/
 SEN/
 SEN.parquet.gzip
 SEN.csv
+SEN1.csv
 
 # Distribution / packaging
 .Python
