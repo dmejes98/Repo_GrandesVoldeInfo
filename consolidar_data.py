@@ -74,4 +74,4 @@ print("Tiempo de ejecución en minutos: ", ejec_time)
 
 
 operaciones['HORA DE CIERRE'] = operaciones['HORA DE CIERRE'].apply(lambda x: x.replace(":", "") if isinstance(x, str) else x)
-operaciones.to_csv('SEN1.csv')
+operaciones.to_csv('SEN.csv')
