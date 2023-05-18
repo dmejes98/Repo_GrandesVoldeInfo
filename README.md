@@ -1,6 +1,6 @@
 # Repo_GrandesVoldeInfo
 
-## Procesamiento inicial de los datos 
+## Preparación inicial de los datos 
 
 El Script 'consolidar_data.py' tiene como objetivo consolidar los archivos mensuales de operaciones del SEN en una sola base de datos. Se sigue el siguiente procedimiento:
 
@@ -26,3 +26,15 @@ El Script 'consolidar_data.py' tiene como objetivo consolidar los archivos mensu
    - Los datos procesados se guardan en un archivo CSV llamado "SEN.csv" utilizando el método `to_csv()` de pandas.
 
 En resumen, el código procesa los datos financieros contenidos en los archivos Excel, filtrando y transformando los datos en un DataFrame consolidado que cumple con los criterios de interés. Finalmente, el resultado se guarda en un archivo CSV para su uso posterior sobre modelado y machine learning.
+
+## Procesamiento en Spark
+
+Adjunto se encuentra el notebook 'Proyecto_Mineria_de_Datos_Castro_Contreras_Mejia.ipynb'. Este carga la información arrojada en el .CSV anterior, y comienza a procesar los datos a través de algunas transformaciones en Spark. Es así como finalmente se obtiene un DataFrame listo para el modelado. El paso a paso de las transformaciones se encuentra en el Notebook.
+
+## Modelación
+
+La modelación se encuentra en el mismo notebook anterior. En este apartado, el DataFrame de Spark es utilizado para correr dos modelos de Machine Learning diferentes: Random Forest y Gradient Boosted Tree.
+
+Para ambos modelos, los datos son separados 70% - 30%, en training y testing, respectivamente. 
+
+Los resultados en ambos modelos son satisfactorios, obteniendo RMSE muy bajos, accuracy de 60% en la dirección de la tasa de interés (60% es un muy buen desempeño si se habla de predicción del mercado de valores), y dejando grandes utilidades en términos de puntos básicos, pero siendo mejor el modelo de Gradient Boosted Tree.
